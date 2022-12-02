@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,13 +16,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-Route::get('/index', [Frontendcontroller:: class,'indexpage'])->name('index=page');
 
-Route::group(['middleware' => ['auth']], function() { 
-    Route::get('/dashboard', 'App\Http\Controllers\FrontendController@redirection')->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
+Route::get('/customer_dashboard', function () {
+    return view('customer_dashboard');
+});
+Route::get('/downline_agent_dashboard', function () {
+    return view('downline_agent_dashboard');
+});
+Route::get('/employee_dashboard', function () {
+    return view('employee_dashboard');
+});
+Route::get('/in_house_agent_dashboard', function () {
+    return view('in_house_agent_dashboard');
+});
+Route::get('/referral_agent_dashboard', function () {
+    return view('referral_agent_dashboard');
+});
+
+
+
+// Route::group(['middleware' => ['auth']], function() { 
+//     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@redirection')->name('dashboard');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
