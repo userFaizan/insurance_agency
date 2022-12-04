@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Insurance Management System</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('assets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/css/vendor.bundle.base.css')}}">
@@ -20,15 +20,15 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
+    <link rel="shortcut icon" href="{{asset('assets/images/ins_logo.jpg')}}" />
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="{{asset('assets/images/logo.svg')}}" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{{asset('assets/images/logo-mini.svg')}}" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="{{asset('assets/images/ins_logo.jpg')}}" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{{asset('assets/images/ins_logo.jpg')}}" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -81,7 +81,7 @@
             </div>
           </li>
           <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
+            <!-- <span class="nav-link">Navigation</span> -->
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="index.html">
@@ -91,7 +91,7 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
@@ -164,6 +164,69 @@
               </span>
               <span class="menu-title">Documentation</span>
             </a>
+          </li> -->
+
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Employee's</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">View Profile</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Users List</a></li> -->
+              </ul>
+            </div>
+          </li>    
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic_1" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Customers</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic_1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Customers</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Assign Policies</a></li> -->
+              </ul>
+            </div>
+          </li>
+             <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth_1" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title">Pay History</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth_1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> View Pay History</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Pay History List </a></li>
+              
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth-3" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title">Employee's Tasks</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth-3">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> View Tasks </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Tasks Updates </a></li>
+              
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
