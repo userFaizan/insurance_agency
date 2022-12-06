@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10a4676796682b8bcc57acb5c7377b4b",
+    "content-hash": "69d820357b82bb93f35af9c5761c4291",
     "packages": [
         {
             "name": "brick/math",
@@ -898,56 +898,6 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
-            "name": "kkszymanowski/traitor",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/KKSzymanowski/Traitor.git",
-                "reference": "c16d90149e807d71562953eb5c9279e75170b63f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/KKSzymanowski/Traitor/zipball/c16d90149e807d71562953eb5c9279e75170b63f",
-                "reference": "c16d90149e807d71562953eb5c9279e75170b63f",
-                "shasum": ""
-            },
-            "require": {
-                "nikic/php-parser": "^1.0|^2.0|^3.0|^4.0",
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "8.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Traitor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kuba Szymanowski",
-                    "email": "kuba.szymanowski@inf24.pl"
-                }
-            ],
-            "description": "Add a trait use statement to existing PHP class",
-            "keywords": [
-                "add",
-                "php",
-                "trait"
-            ],
-            "support": {
-                "email": "kuba.szymanowski@inf24.pl",
-                "issues": "https://github.com/kkszymanowski/traitor/issues",
-                "source": "https://github.com/kkszymanowski/traitor"
-            },
-            "time": "2022-03-02T17:32:19+00:00"
-        },
-        {
             "name": "laravel/framework",
             "version": "v9.42.2",
             "source": {
@@ -1516,16 +1466,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.10.4",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a7790f3dd1b27af81d380e6b2afa77c16ab7e181"
+                "reference": "7e423e5dd240a60adfab9bde058d7668863b7731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a7790f3dd1b27af81d380e6b2afa77c16ab7e181",
-                "reference": "a7790f3dd1b27af81d380e6b2afa77c16ab7e181",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/7e423e5dd240a60adfab9bde058d7668863b7731",
+                "reference": "7e423e5dd240a60adfab9bde058d7668863b7731",
                 "shasum": ""
             },
             "require": {
@@ -1587,7 +1537,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.10.4"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.11.0"
             },
             "funding": [
                 {
@@ -1603,7 +1553,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-26T19:48:01+00:00"
+            "time": "2022-12-02T14:39:57+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -1765,16 +1715,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.63.0",
+            "version": "2.64.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347"
+                "reference": "889546413c97de2d05063b8cb7b193c2531ea211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
-                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/889546413c97de2d05063b8cb7b193c2531ea211",
+                "reference": "889546413c97de2d05063b8cb7b193c2531ea211",
                 "shasum": ""
             },
             "require": {
@@ -1785,7 +1735,7 @@
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
             },
             "require-dev": {
-                "doctrine/dbal": "^2.0 || ^3.0",
+                "doctrine/dbal": "^2.0 || ^3.1.4",
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
@@ -1863,7 +1813,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-30T18:34:28+00:00"
+            "time": "2022-11-26T17:36:00+00:00"
         },
         {
             "name": "nette/schema",
@@ -2885,43 +2835,49 @@
             "time": "2022-11-05T23:03:38+00:00"
         },
         {
-            "name": "santigarcor/laratrust",
-            "version": "7.1.0",
+            "name": "spatie/laravel-permission",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "8a18c70bb1ced09baed361b68c432b0bedb74f16"
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "3a9bc00e6d338a9c61f830af654aa5c326407632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/8a18c70bb1ced09baed361b68c432b0bedb74f16",
-                "reference": "8a18c70bb1ced09baed361b68c432b0bedb74f16",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/3a9bc00e6d338a9c61f830af654aa5c326407632",
+                "reference": "3a9bc00e6d338a9c61f830af654aa5c326407632",
                 "shasum": ""
             },
             "require": {
-                "kkszymanowski/traitor": "^1.0",
-                "laravel/framework": "~6.0|~7.0|~8.0|^9.0",
-                "php": ">=7.2"
+                "illuminate/auth": "^7.0|^8.0|^9.0",
+                "illuminate/container": "^7.0|^8.0|^9.0",
+                "illuminate/contracts": "^7.0|^8.0|^9.0",
+                "illuminate/database": "^7.0|^8.0|^9.0",
+                "php": "^7.3|^8.0|^8.1"
             },
             "require-dev": {
-                "mockery/mockery": "^1.3.2",
-                "orchestra/testbench": "4.*|5.*|6.*|7.*",
-                "phpunit/phpunit": "^7.5.15|^8.4|^9.0"
+                "orchestra/testbench": "^5.0|^6.0|^7.0",
+                "phpunit/phpunit": "^9.4",
+                "predis/predis": "^1.1"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Laratrust\\LaratrustServiceProvider"
-                    ],
-                    "aliases": {
-                        "Laratrust": "Laratrust\\LaratrustFacade"
-                    }
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "5.x-dev",
+                    "dev-master": "5.x-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
-                    "Laratrust\\": "src/"
+                    "Spatie\\Permission\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2930,34 +2886,35 @@
             ],
             "authors": [
                 {
-                    "name": "Santiago Garcia",
-                    "homepage": "http://santigarcor.me"
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
-            "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
+            "description": "Permission handling for Laravel 6.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
             "keywords": [
-                "Teams",
                 "acl",
-                "authorization",
-                "laratrust",
                 "laravel",
-                "multiusers",
+                "permission",
                 "permissions",
-                "php",
                 "rbac",
-                "roles"
+                "roles",
+                "security",
+                "spatie"
             ],
             "support": {
-                "issues": "https://github.com/santigarcor/laratrust/issues",
-                "source": "https://github.com/santigarcor/laratrust/tree/7.1.0"
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/5.7.0"
             },
             "funding": [
                 {
-                    "url": "https://github.com/santigarcor",
+                    "url": "https://github.com/spatie",
                     "type": "github"
                 }
             ],
-            "time": "2022-03-04T15:28:43+00:00"
+            "time": "2022-11-23T07:01:37+00:00"
         },
         {
             "name": "symfony/console",
