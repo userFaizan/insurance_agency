@@ -9,10 +9,9 @@
               <h3 class="page-title">  </h3>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb"> 
-                  <button type="button" class="btn btn-info btn-icon-text" 
-                  onclick="window.location.href='#';" >
+                  <a href="{{ route('permissions.create') }}" type="button" class="btn btn-info btn-icon-text" >
                             <i class="mdi mdi-plus-circle-outline"></i>
-                            Add New Module </button>
+                            Add New Module </a>
                 </ol>
               </nav>
             </div>
@@ -25,6 +24,11 @@
                     <h4 class="card-title">Module Table</h4>
                     <p class="card-description"> All Module Details <code></code>
                     </p>
+                    @if(session()->has('message'))
+                     <div class="alert alert-success">
+                       {{ session()->get('message') }}
+                    </div>
+                    @endif
                     <div class="table-responsive">
                       <table class="table table-striped">
                         <thead>
@@ -35,32 +39,24 @@
                           </tr>
                         </thead>
                         <tbody>
-
+                          @foreach($Permission as $permissions)
                           <tr>
-                            <td> 2 </td>
-                            <td> Admin </td>
-                            <td><label class="badge badge-info">Edit</label>
-                            <label class="badge badge-danger">Delete</label>
-                          </td>
+                            <td> {{ $permissions->id  }}</td>
+                            <td> {{ $permissions->name  }} </td>
+                            <td>
+                              
+                              <a href="{{ route('permissions.edit', $permissions->id) }}"> <label class="badge badge-info">Edit</label></a> 
+                              {{-- <a href="{{ route('permissions.destroy', $permissions->id) }}"> <label class="badge badge-danger">Delete</label> --}}
+                                <form method="post" action="{{route('permissions.destroy',$permissions->id)}}">
+                                  @method('delete')
+                                  @csrf
+                                  <button type="submit" class="badge badge-danger">Delete</button>
+                              </form>
+                              </td>
                           </tr>
-
-                          <tr>
-                            <td> 3 </td>
-                            <td> Admin </td>
-                            <td><label class="badge badge-info">Edit</label>
-                            <label class="badge badge-danger">Delete</label>
-                          </td>
-                          </tr>
-
-                          <tr>
-                            <td> 4 </td>
-                            <td> Admin </td>
-                            <td><label class="badge badge-info">Edit</label>
-                            <label class="badge badge-danger">Delete</label>
-                          </td>
-                          </tr>
-
                         </tbody>
+                        @endforeach
+
                       </table>
                     </div>
                   </div>

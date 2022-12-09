@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
-;
+use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,10 +30,12 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('permissions', RoleController::class);
+    Route::resource('permissions', PermissionController::class);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+// Route::group(['middleware' => ['permission:user_management']], function () {
+//     Route::get('/welcome', [DashboardController::class, 'welcome'])->name('profile.welcome');
+// });
 require __DIR__.'/auth.php';
