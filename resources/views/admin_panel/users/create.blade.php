@@ -41,13 +41,7 @@
       <span class="text-danger">{{ $errors->first('email') }}</span>
      @endif
     </div>
-    {{-- <div class="form-group">
-      <label for="exampleInputUsername1">Role</label>
-      <select class="form-control">
-        <option>Client</option>
-        <option>Admin</option>
-      </select>
-    </div> --}}   
+ 
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name="password" class="form-control" id="" placeholder="Password">
@@ -62,6 +56,14 @@
       <span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
      @endif
     </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> Assign Roles</label>
+      {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+      @if ($errors->has('roles'))
+      <span class="text-danger">{{ $errors->first('roles') }}</span>
+     @endif
+    </div>
+
     <button type="submit" class="btn btn-primary mr-2">Submit</button>
     <a href="{{ route('users.index') }}" class="btn btn-dark">Cancel</a>
   </form>

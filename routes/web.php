@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-// Route::group(['middleware' => ['permission:user_management']], function () {
-//     Route::get('/welcome', [DashboardController::class, 'welcome'])->name('profile.welcome');
-// });
+Route::group(['middleware' => ['permission:User Management']], function () {
+    Route::get('/welcome', [DashboardController::class, 'welcome'])->name('profile.welcome');
+});
 require __DIR__.'/auth.php';
