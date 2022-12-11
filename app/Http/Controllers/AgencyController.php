@@ -9,21 +9,21 @@ class AgencyController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \view
      */
     public function index()
     {
-        //
+        return view('agency.agency_list');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \view
      */
     public function create()
     {
-        //
+        return view('agency.add_agency');
     }
 
     /**
@@ -41,22 +41,22 @@ class AgencyController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \view
      */
     public function show($id)
     {
-        //
+        return view('agency.agency_list');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \view
      */
     public function edit($id)
     {
-        //
+        return view('agency.agency_edit');
     }
 
     /**
@@ -79,6 +79,6 @@ class AgencyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd('Record Deleted');
     }
 }

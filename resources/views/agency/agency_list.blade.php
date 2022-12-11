@@ -10,7 +10,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb"> 
                   <button type="button" class="btn btn-info btn-icon-text" 
-                  onclick="window.location.href='#';" >
+                  onclick="window.location.href='{{ URL::TO('agency/create') }}'" >
                             <i class="mdi mdi-plus-circle-outline"></i>
                             Add New Agency </button>
                 </ol>
@@ -54,10 +54,20 @@
                             <td> Edward.123 </td>
                             <td> Admin </td>
                             <td> Edward </td>
-                            <td><label class="badge badge-info">Edit</label>
-                          <label class="badge badge-danger">Delete</label>
+                            <td>
+                              <div class="row">
+                                <a href="{{ URL::TO('agency/'.'1'.'/edit') }}">
+                                <button class="badge badge-info">Edit</button> 
+                                </a> 
+                              <form method="post" action="{{route('agency.destroy',1)}}">
+                                @method('delete')
+                                @csrf
+                                <button type="submit" class="badge badge-danger">Delete</button>
+                            </form>
+                              </div>
+                              {{-- <a href="{{route('agency.destroy',1)}}"> <label class="badge badge-danger">Delete</label> </a> --}}
                           </td>
-                            <td><label class="badge badge-info">View details</label></td>
+                            <td><a href="{{ url::to('agency/1') }}"><button class="badge badge-info">View details</button></a></td>
                           </tr>
 
 

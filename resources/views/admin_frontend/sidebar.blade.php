@@ -35,7 +35,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -116,8 +116,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Agency </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Agency List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agency/create') }}"> Add Agency </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agency') }}"> Agency List </a></li>
               
               </ul>
             </div>
