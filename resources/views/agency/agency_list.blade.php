@@ -55,8 +55,29 @@
                             <td> Admin </td>
                             <td> Edward </td>
                             <td><label class="badge badge-info">Edit</label>
-                          <label class="badge badge-danger">Delete</label>
-                          </td>
+                          <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Delete
+</button>                          </td>
+                            <td><label class="badge badge-info">View details</label></td>
+                          </tr>
+
+                          <tr>
+                          <td class="py-1">
+                              <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
+                            </td>
+                            <td> Ed </td>
+                            <td> Edward </td>
+                            <td> Edward </td>
+                            <td> Edward </td>
+                            <td> Edward.123 </td>
+                            <td> Admin </td>
+                            <td> Edward </td>
+                            <td><label class="badge badge-info">Edit</label>
+                          <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Delete
+</button>                          </td>
                             <td><label class="badge badge-info">View details</label></td>
                           </tr>
 
@@ -67,4 +88,23 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 " id="exampleModalLabel">Delete Agency Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">delete</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
