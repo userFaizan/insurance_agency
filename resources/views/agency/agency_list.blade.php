@@ -59,11 +59,7 @@
                                 <a href="{{ URL::TO('agency/'.'1'.'/edit') }}">
                                 <button class="badge badge-info">Edit</button> 
                                 </a> 
-                              <form method="post" action="{{route('agency.destroy',1)}}">
-                                @method('delete')
-                                @csrf
-                                <button type="submit" class="badge badge-danger">Delete</button>
-                            </form>
+                           
                               </div>
                               {{-- <a href="{{route('agency.destroy',1)}}"> <label class="badge badge-danger">Delete</label> </a> --}}
                           </td>
@@ -85,13 +81,17 @@
         <h1 class="modal-title fs-5 " id="exampleModalLabel">Delete Agency Details</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form method="post" action="{{route('agency.destroy',1)}}">
+        @method('delete')
+        @csrf
       <div class="modal-body">
         Are you sure you want to delete
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">delete</button>
+        <button type="submit" class="btn btn-primary">delete</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
