@@ -153,7 +153,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
             <div class="navbar-profile">
+<<<<<<< HEAD
               <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
+=======
+              <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face15.jpg')}}" alt="">
+>>>>>>> origin/roles_and_permissions_faizan
               <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
               <i class="mdi mdi-menu-down d-none d-sm-block"></i>
             </div>

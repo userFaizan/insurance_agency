@@ -37,7 +37,11 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
+<<<<<<< HEAD
                   <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
+=======
+                  <img class="img-xs rounded-circle " src="{{asset('assets/images/faces/face15.jpg')}}" alt="">
+>>>>>>> origin/roles_and_permissions_faizan
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -98,13 +102,17 @@
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
               </span>
-              <span class="menu-title">Users</span>
+              <span class="menu-title">Users Management</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add User</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Users List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('permissions.create') }}">Add Module</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('permissions.index') }}">Module List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('roles.create') }}">Add Roles</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('roles.index') }}">Roles List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('users.create') }}">Add Users</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('users.index') }}">Users List</a></li>
               </ul>
             </div>
           </li>

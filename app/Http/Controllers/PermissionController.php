@@ -15,7 +15,7 @@ class PermissionController extends Controller
     public function index()
     {
         $Permission = Permission::all();
-        return view ('permission.index',compact('Permission'));
+        return view ('admin_panel.module.index', compact('Permission'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('permission.create');
+        return view('admin_panel.module.create');
     }
 
     /**
@@ -35,15 +35,16 @@ class PermissionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         $request->validate([
-            'name' => 'required',
-            'guard_name' => 'required',
-          
+            'name' => 'required|unique:users,name'
         ]);
-        
-        Permission::create($request->post());
-        return redirect()->route('permission.store')->with('success','Permission has been created successfully.');    }
+
+        Permission::create($request->only('name'));
+
+        return redirect()->route('permissions.index')
+        ->with('message', 'Module Created successfully.');
+    }
 
     /**
      * Display the specified resource.
@@ -65,7 +66,7 @@ class PermissionController extends Controller
     public function edit($id)
     {
         $Permission = Permission::find($id);
-        return view('permission.edit',compact('Permission'));
+        return view('admin_panel.module.edit',compact('Permission'));
 
     }
 
@@ -79,13 +80,12 @@ class PermissionController extends Controller
     public function update(Request $request, Permission $Permission)
     {
         $request->validate([
-            'name' => 'required',
-            'guard_name' => 'required',
+            'name' => 'required|unique:permissions,name,'.$Permission->id
         ]);
-        
-        $Permission->fill($request->post())->save();
 
-        return redirect()->route('permission.index')->with('success','Permission Has Been updated successfully');
+        $Permission->update($request->only('name'));
+        return redirect()->route('permissions.index')
+        ->with('message', 'Module Updated successfully.');
     }
 
  /**
@@ -97,6 +97,6 @@ class PermissionController extends Controller
     public function destroy(Permission $Permission)
     {
         $Permission->delete();
-        return redirect()->route('Permission.index')->with('success','Permission has been deleted successfully');
+        return redirect()->route('permissions.index')->with('message','Module has been deleted successfully');
     }
 }
