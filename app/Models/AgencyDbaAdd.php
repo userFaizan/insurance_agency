@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JobDetail extends Model
+class AgencyDbaAdd extends Model
 {
     use HasFactory;
      /**
@@ -13,9 +13,9 @@ class JobDetail extends Model
      *
      * @var string
      */
-    protected $table = 'job_details';
-    public function employee()
+    protected $table = 'agency_dba_add';
+    public function agency()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Agency::class);
     }
 }

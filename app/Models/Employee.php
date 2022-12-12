@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'employees';
+    
+
 
     public function paymentHistory()
     {
@@ -27,6 +35,6 @@ class Employee extends Model
     }
     public function jobDetail()
     {
-        return $this->hasMany(JobDetail::class);
+        return $this->hasOne(JobDetail::class);
     }
 }

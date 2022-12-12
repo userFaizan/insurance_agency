@@ -15,8 +15,16 @@ return new class extends Migration
     {
         Schema::create('agencies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('logo');
+            $table->string('logo')->nullable();
+            $table->string('name')->nullable();
+            $table->string('principal_agent')->nullable();
+            $table->json('address')->nullable();
+            $table->json('phone')->nullable();
+            $table->json('fax')->nullable();
+            $table->json('email')->nullable();
+            $table->json('webiste')->nullable();
+            $table->string('notes')->nullable();
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }

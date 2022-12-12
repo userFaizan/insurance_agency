@@ -8,4 +8,39 @@ use Illuminate\Database\Eloquent\Model;
 class Agency extends Model
 {
     use HasFactory;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'agencies';
+
+    public function agencyAccountingInfo()
+    {
+        return $this->hasOne(AgencyAccountingInfo::class);
+    }
+    public function agencyAdditionalLocation()
+    {
+        return $this->hasMany(AgencyAddtionalLocation::class);
+    }
+    public function agencyDbaAdd()
+    {
+        return $this->hasMany(AgencyDbaAdd::class);
+    }
+    public function agencyLicenseInfo()
+    {
+        return $this->hasOne(AgenctLicenseInfo::class);
+    }
+    public function agencyLoginInfo()
+    {
+        return $this->hasMany(AgencyLogInInfo::class);
+    }
+    public function agencyNonResidentialState()
+    {
+        return $this->hasMany(AgencyNonResidentialState::class);
+    }
+    public function agencyEandOInfo()
+    {
+        return $this->hasOne(EAndOInfo::class);
+    }
 }
