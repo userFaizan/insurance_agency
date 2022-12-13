@@ -12,7 +12,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb"> 
                   <button type="button" class="btn btn-info btn-icon-text" 
-                  onclick="window.location.href='" >
+                  onclick="window.location.href='{{ URL::TO('customer/create') }}'" >
                             <i class="mdi mdi-plus-circle-outline"></i>
                             Add New Client </button>
                 </ol>
@@ -58,14 +58,14 @@
                             <td> Edward </td>
                             <td>
                               <div class="row">
-                                <a href="">
+                                <a href="{{  URL::TO('customer/1/edit')  }}">
                                 <button class="badge badge-info">Edit</button> 
                                 </a> 
                            
                               </div>
                               {{-- <a href="{{route('agency.destroy',1)}}"> <label class="badge badge-danger">Delete</label> </a> --}}
                           </td>
-                            <td><a href=""><button class="badge badge-info">View details</button></a></td>
+                            <td><a href="{{ URL::TO('customer/1') }}"><button class="badge badge-info">View details</button></a></td>
                           </tr>
 
 

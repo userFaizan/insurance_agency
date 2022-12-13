@@ -13,7 +13,7 @@ class AgentController extends Controller
      */
     public function index()
     {
-        //
+        return view('inhouse_agent.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class AgentController extends Controller
      */
     public function create()
     {
-        //
+        return view('inhouse_agent.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class AgentController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('inhouse_agent.view');
     }
 
     /**
@@ -56,7 +56,7 @@ class AgentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('inhouse_agent.edit');
     }
 
     /**

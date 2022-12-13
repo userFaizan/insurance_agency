@@ -45,7 +45,7 @@ class AgencyController extends Controller
      */
     public function show($id)
     {
-        return view('agency.agency_list');
+        return view('agency.agency_view');
     }
 
     /**

@@ -1,7 +1,5 @@
 @extends('admin_frontend.master')
 @section('content')
-@extends('admin_frontend.master')
-@section('content')
 <div class="content-wrapper">
 
   <!-- Body start  -->
@@ -12,7 +10,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb"> 
                   <button type="button" class="btn btn-info btn-icon-text" 
-                  onclick="window.location.href='" >
+                  onclick="window.location.href='{{ URL::to('employee/create') }}'" >
                             <i class="mdi mdi-plus-circle-outline"></i>
                             Add New Employees </button>
                 </ol>
@@ -58,14 +56,15 @@
                             <td> Edward </td>
                             <td>
                               <div class="row">
-                                <a href="">
+                                <a href="{{ URL::to('employee/2/edit') }}">
                                 <button class="badge badge-info">Edit</button> 
                                 </a> 
                            
                               </div>
                               {{-- <a href="{{route('agency.destroy',1)}}"> <label class="badge badge-danger">Delete</label> </a> --}}
                           </td>
-                            <td><a href=""><button class="badge badge-info">View details</button></a></td>
+                            <td><a href="{{ URL::to('employee/2') }}">
+                              <button class="badge badge-info">View details</button></a></td>
                           </tr>
 
 
@@ -97,6 +96,4 @@
     </div>
   </div>
 </div>
-@endsection
-
 @endsection

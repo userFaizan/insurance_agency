@@ -13,7 +13,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        return view('customer_personal.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('customer_personal.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('customer_personal.view');
     }
 
     /**
@@ -56,7 +56,7 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('customer_personal.edit');
     }
 
     /**

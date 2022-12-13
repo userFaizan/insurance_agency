@@ -138,8 +138,8 @@
             </a>
             <div class="collapse" id="auth_1">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Agents </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Agents List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agent/create') }}"> Add Agents </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agent') }}"> Agents List </a></li>
               
               </ul>
             </div>
@@ -154,8 +154,23 @@
             </a>
             <div class="collapse" id="ui-basic_1">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Customers</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Customers List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('customer/create') }}">Add Customers</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('customer') }}">Customers List</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic_x" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-account-circle"></i>
+              </span>
+              <span class="menu-title">Employees</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic_x">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('employee/create') }}">Add Employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('employee') }}">Employees List</a></li>
               </ul>
             </div>
           </li>
@@ -174,7 +189,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+          {{-- <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#auth-3" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
@@ -189,7 +204,7 @@
               
               </ul>
             </div>
-          </li>
+          </li> --}}
           <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/forms/basic_elements.html">
               <span class="menu-icon">
