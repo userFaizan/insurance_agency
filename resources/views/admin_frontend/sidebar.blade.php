@@ -37,11 +37,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-<<<<<<< HEAD
                   <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
-=======
-                  <img class="img-xs rounded-circle " src="{{asset('assets/images/faces/face15.jpg')}}" alt="">
->>>>>>> origin/roles_and_permissions_faizan
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
