@@ -9,7 +9,8 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Agency Fields</h4>
-          <form class="form-sample">
+          <form class="form-sample"  method="POST"  action="{{ route('agency.store') }}" enctype="multipart/form-data">
+            @csrf
             <p class="card-description"> Agency Info </p>
 
             <!-- row -->
@@ -18,7 +19,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Agency Name</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" name="name" class="form-control" />
+                    @if ($errors->has('name'))
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -26,7 +30,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">UPLOAD LOGO</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" />
+                    <input type="file" name="logo" class="form-control" />
+                    @if ($errors->has('logo'))
+                    <span class="text-danger">{{ $errors->first('logo') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -37,7 +44,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Principal Agent</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" name="principal_agent" class="form-control" />
+                       @if ($errors->has('principal_agent'))
+                    <span class="text-danger">{{ $errors->first('principal_agent') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -45,7 +55,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Address </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" required />
+                    <input type="text" name="address" class="form-control" required />
+                    @if ($errors->has('address'))
+                    <span class="text-danger">{{ $errors->first('address') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -56,7 +69,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Phone </label>
                   <div class="col-sm-9">
-                    <input type="tel" class="form-control" required/>
+                    <input type="tel" name="phone" class="form-control" required/>
+                    @if ($errors->has('phone'))
+                    <span class="text-danger">{{ $errors->first('phone') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -64,7 +80,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fax </label>
                   <div class="col-sm-9">
-                    <input type="tel" class="form-control" required />
+                    <input type="tel" name="fax" class="form-control" required />
+                    @if ($errors->has('fax'))
+                    <span class="text-danger">{{ $errors->first('fax') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -76,7 +95,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Email</label>
                   <div class="col-sm-9">
-                    <input type="email" class="form-control" required />
+                    <input type="email" name="email" class="form-control" required />
+                    @if ($errors->has('email'))
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -84,7 +106,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
-                    <input type="url" class="form-control" required />
+                    <input type="url" name="webiste" class="form-control" required />
+                    @if ($errors->has('webiste'))
+                    <span class="text-danger">{{ $errors->first('webiste') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -95,7 +120,10 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" name="notes" class="form-control" />
+                    @if ($errors->has('notes'))
+                    <span class="text-danger">{{ $errors->first('notes') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
@@ -103,21 +131,24 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">UPLOAD FILE(S)</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" />
+                    <input type="file" name="file" class="form-control" />
+                     @if ($errors->has('file'))
+                    <span class="text-danger">{{ $errors->first('file') }}</span>
+                   @endif
                   </div>
                 </div>
               </div>
             </div>
   <!-- agency end  -->
 
-  <p class="card-description"> Accounting Info</p>
+ <p class="card-description"> Accounting Info</p>
 
   <div class="row">
               <div class="col-md-6">
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Upload EIN letter</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" />
+                    <input type="file" name="ein_letter" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -125,7 +156,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Upload VOID Check (s)</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" />
+                    <input type="file" name="void_checks" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -137,7 +168,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Tax ID #</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" name="tax_id" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -145,7 +176,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Business Type</label>
                   <div class="col-sm-9">
-                    <select class="form-control">
+                    <select class="form-control" name="business_type">
                       <option>ex</option>
                       <option>ex</option>
                     </select>
@@ -162,7 +193,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fiscal Month Start</label>
                   <div class="col-sm-9">
-                    <select class="form-control">
+                    <select class="form-control" name="fiscal_month_start">
                       <option>ex</option>
                       <option>ex</option>
                     </select>
@@ -174,7 +205,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fiscal Month End</label>
                   <div class="col-sm-9">
-                    <select class="form-control">
+                    <select class="form-control" name="fiscal_month_end">
                       <option>ex</option>
                       <option>ex</option>
                     </select>
@@ -190,7 +221,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Income Tax Due</label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="income_tax" />
                   </div>
                 </div>
               </div>
@@ -199,7 +230,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Franchise Tax Due </label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="franchise_tax_due" />
                   </div>
                 </div>
               </div>
@@ -211,7 +242,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Sales Tax Due</label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="sales_tax_due" />
                   </div>
                 </div>
               </div>
@@ -220,7 +251,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Routing #</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" required />
+                    <input type="text" class="form-control" required  name="routing_no"/>
                   </div>
                 </div>
               </div>
@@ -232,7 +263,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Type of account</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="type_of_account" />
                   </div>
                 </div>
               </div>
@@ -241,7 +272,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Account #</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" required />
+                    <input type="text" class="form-control" required name="account_no"/>
                   </div>
                 </div>
               </div>
@@ -255,7 +286,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Upload E&O</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="file" class="form-control" name="file" />
                   </div>
                 </div>
               </div>
@@ -264,7 +295,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Policy #</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="policy_no" />
                   </div>
                 </div>
               </div>
@@ -276,7 +307,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Effective Date</label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="effective_date" />
                   </div>
                 </div>
               </div>
@@ -285,7 +316,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date</label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="expiration_date" />
                   </div>
                 </div>
               </div>
@@ -297,7 +328,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Policy Limits</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="policy_limits" />
                   </div>
                 </div>
               </div>
@@ -314,7 +345,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Upload License(s)</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" />
+                    <input type="file" name="file" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -323,7 +354,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Resident State:</label>
                   <div class="col-sm-9">
-                    <select class="form-control">
+                    <select class="form-control" name="resident_state">
                       <option>Alabama</option>
                       <option>Alaska</option>
                       <option>Arizona</option>
@@ -387,7 +418,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">NPN #</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="npn_no" />
                   </div>
                 </div>
               </div>
@@ -396,7 +427,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License # </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="license_no" />
                   </div>
                 </div>
               </div>
@@ -409,7 +440,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License Type</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="license_type" />
                   </div>
                 </div>
               </div>
@@ -418,7 +449,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date </label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="expiration_date" />
                   </div>
                 </div>
               </div>
@@ -431,12 +462,12 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">update date</label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="upload_date" />
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
+              {{-- <div class="col-md-6">
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Non-resident States </label>
                   <div class="col-sm-9">
@@ -494,7 +525,7 @@
                     </select>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
             </div>
              <!-- row new -->
@@ -507,7 +538,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">State</label>
                   <div class="col-sm-9">
-                  <select class="form-control">
+                  <select class="form-control" name="state">
                       <option>Alabama</option>
                       <option>Alaska</option>
                       <option>Arizona</option>
@@ -567,7 +598,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License # </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="license_no" />
                   </div>
                 </div>
               </div>
@@ -580,7 +611,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License Type</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="license_type"/>
                   </div>
                 </div>
               </div>
@@ -589,7 +620,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date </label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <input type="date" class="form-control" name="expiration_date" />
                   </div>
                 </div>
               </div>
@@ -604,7 +635,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Company</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" require />
+                    <input type="text" name="company" class="form-control" require />
                   </div>
                 </div>
               </div>
@@ -613,7 +644,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" require />
+                    <input type="text" name="website" class="form-control" require />
                   </div>
                 </div>
               </div>
@@ -626,7 +657,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">User Name</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" require />
+                    <input type="text" name="user_name" class="form-control" require />
                   </div>
                 </div>
               </div>
@@ -635,7 +666,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Password </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" require />
+                    <input type="text" name="password" class="form-control" require />
                   </div>
                 </div>
               </div>
@@ -648,7 +679,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">PIN</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" require />
+                    <input type="text" name="pin" class="form-control" require />
                   </div>
                 </div>
               </div>
@@ -657,7 +688,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" name="notes" class="form-control" />
                   </div>
                 </div>
               </div>
@@ -670,21 +701,18 @@
   <div class="row">
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">DBA Name</label>
+                  <label class="col-sm-3 col-form-label">DBA </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="dba" />
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">DOI Registered State(s) </label>
+                  <label class="col-sm-3 col-form-label">DBA Name</label>
                   <div class="col-sm-9">
-                    <select class="form-control">
-                      <option>ex</option>
-                      <option>ex</option>
-                    </select>
+                    <input type="text" class="form-control" name="dba_name" />
                   </div>
                 </div>
               </div>
@@ -696,15 +724,25 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Exp. Date</label>
+                  <label class="col-sm-3 col-form-label">DOI Registered State(s) </label>
                   <div class="col-sm-9">
-                    <input type="date" class="form-control" />
+                    <select class="form-control" name="doi_registered">
+                      <option>ex</option>
+                      <option>ex</option>
+                    </select>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Exp. Date</label>
+                  <div class="col-sm-9">
+                    <input type="date" class="form-control"  name="exp_date"/>
+                  </div>
+                </div>
                 </div> 
+             
                 </div>
                <!-- row new -->
 
@@ -716,7 +754,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Manager</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="manager" />
                   </div>
                 </div>
               </div>
@@ -725,7 +763,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Address </label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="address" />
                   </div>
                 </div>
               </div>
@@ -737,7 +775,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Phone</label>
                   <div class="col-sm-9">
-                    <input type="tel" class="form-control" />
+                    <input type="tel" class="form-control" name="phone" />
                   </div>
                 </div>
               </div>
@@ -746,7 +784,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fax </label>
                   <div class="col-sm-9">
-                    <input type="tel" class="form-control" />
+                    <input type="tel" class="form-control" name="fax" />
                   </div>
                 </div>
               </div>
@@ -758,19 +796,19 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Email</label>
                   <div class="col-sm-9">
-                    <input type="email" class="form-control" />
+                    <input type="email" class="form-control" name="email" />
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
+              {{-- <div class="col-md-6">
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
-                    <input type="url" class="form-control" />
+                    <input type="url" class="form-control" nam />
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
             </div>
              <!-- row new -->
@@ -779,25 +817,25 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes:</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" name="notes" />
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Submit Form </label>
-                  <div class="col-sm-9">
-                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
-
-                  </div>
-                </div>
-              </div>
+           
               
-            </div>
+            </div> 
              <!-- row end -->
 
-             
+             <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Submit Form </label>
+                <div class="col-sm-9">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+                </div>
+              </div>
+            </div>
 <!-- form end -->
           </form>
         </div>

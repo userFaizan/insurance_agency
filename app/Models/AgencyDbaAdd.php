@@ -14,6 +14,7 @@ class AgencyDbaAdd extends Model
      * @var string
      */
     protected $table = 'agency_dba_add';
+    protected $guarded = [];
     public function agency()
     {
         return $this->belongsTo(Agency::class);
