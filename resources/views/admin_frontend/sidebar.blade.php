@@ -184,8 +184,8 @@
             </a>
             <div class="collapse" id="ui-basic-3">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Vendors</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Vendors List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('vendor/create') }}">Add Vendors</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('vendor') }}">Vendors List</a></li>
               </ul>
             </div>
           </li>

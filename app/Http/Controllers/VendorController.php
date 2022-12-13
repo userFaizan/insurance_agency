@@ -13,7 +13,7 @@ class VendorController extends Controller
      */
     public function index()
     {
-        //
+        return view('vendor.vendor_list');
     }
 
     /**
@@ -23,7 +23,7 @@ class VendorController extends Controller
      */
     public function create()
     {
-        //
+        return view('vendor.vendor_add');
     }
 
     /**
@@ -45,7 +45,7 @@ class VendorController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('vendor.vendor_details');
     }
 
     /**
@@ -56,7 +56,7 @@ class VendorController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('vendor.vendor_edit');
     }
 
     /**

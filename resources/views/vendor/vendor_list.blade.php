@@ -10,7 +10,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb"> 
                   <button type="button" class="btn btn-info btn-icon-text" 
-                  onclick="window.location.href='#';" >
+                  onclick="window.location.href='{{ URL::TO('vendor/create') }}';" >
                             <i class="mdi mdi-plus-circle-outline"></i>
                             Add New Vendor </button>
                 </ol>
@@ -69,12 +69,19 @@
                             <td> Edward.123 </td>
                             <td> Admin </td>
                             <td> Edward </td>
-                            <td><button class="badge badge-info">Edit</button>
-                          <!-- Button trigger modal -->
+                            <td>
+                              <a href="{{ URL::TO('vendor/2/edit') }}">
+                              <button class="badge badge-info">Edit</button>
+                              </a>
+                              <!-- Button trigger modal -->
 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Delete
 </button>                          </td>
-                            <td><button class="badge badge-info">View details</button></td>
+                            <td>
+                              <a href="{{ URL::To('vendor/4') }}">
+                              <button class="badge badge-info">View details</button>
+                              </a>
+                            </td>
                           </tr>
 
 

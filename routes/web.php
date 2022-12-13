@@ -10,6 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('agency', AgencyController::class);
     Route::resource('employee', EmployeeController::class);
     Route::resource('customer', CustomerController::class);
+    Route::resource('vendor', VendorController::class);
     Route::resource('agent', AgentController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
