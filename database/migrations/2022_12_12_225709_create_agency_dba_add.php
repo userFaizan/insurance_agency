@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('agency_dba_add', function (Blueprint $table) {
             $table->id();
-            $table->josn('dba')->nullable();
+            $table->json('dba')->nullable();
             $table->string('dba_name')->nullable();
             $table->json('doi_registered')->nullable();
             $table->date('exp_date')->nullable();
