@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
+        Schema::create('client_histories', function (Blueprint $table) {
             $table->id();
+            $table->string('previous_address')->nullable();
+            $table->string('previous_phone')->nullable();
+            $table->string('previous_name')->nullable();
+            $table->string('previous_social_media')->nullable();
+            $table->foreignId('client_id')->constrained('clients');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('client_histories');
     }
 };
