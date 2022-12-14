@@ -50,8 +50,9 @@
 @foreach ($data as $agency )
                           <tr>
                           <td class="py-1">
-                              {{-- <img src="{{Storage::get('public/images/', $agency->logo) }}" height="50px" width="50px" alt="image" /> --}}
-                              <img src="{{ asset('storage/images/'.$agency->logo) }}" height="50px" width="50px">
+                              <img src="{{ asset('/storage/images/'.$agency->logo) }}" height="50px" width="50px">
+                              {{-- <img src="/images/{{$agency ->logo}}" /> --}}
+
 
                             </td>
                             <td> {{ $agency->name }} </td>
@@ -63,7 +64,7 @@
                             <td> {{ $agency->webiste }} </td>
                             <td>
                               <div class="row">
-                                <a href="{{ URL::TO('agency/'.'1'.'/edit') }}">
+                                <a href="{{ route('agency.edit',$agency->id) }}">
                                 <button class="badge badge-info">Edit</button> 
                                 </a> 
                              
@@ -72,7 +73,7 @@
                               </div>
                               {{-- <a href="{{route('agency.destroy',1)}}"> <label class="badge badge-danger">Delete</label> </a> --}}
                           </td>
-                            <td><a href="{{ url::to('agency/1') }}"><button class="badge badge-info">View details</button></a></td>
+                            <td><a href="{{ route('agency.show',$agency->id)}}"><button class="badge badge-info">View details</button></a></td>
                           </tr>
 
                           @endforeach

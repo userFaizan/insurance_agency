@@ -18,7 +18,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Agency Name</label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">name</p>
+                    <p class="col-form-label text-muted" >{{ $agency->name }}</p>
                   </div>
                 </div>
               </div>
@@ -39,7 +39,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Principal Agent</label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">Principal</p>
+                    <p class="col-form-label text-muted">{{ $agency->principal_agent }}</p>
                   </div>
                 </div>
               </div>
@@ -47,7 +47,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Address </label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">Address</p>
+                    <p class="col-form-label text-muted">{{ $agency->address }}</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +58,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Phone </label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">Phone</p>
+                    <p class="col-form-label text-muted">{{ $agency->phone }}</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +66,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fax </label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">Fax</p>
+                    <p class="col-form-label text-muted">{{ $agency->fax }}</p>
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Email</label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">email</p>
+                    <p class="col-form-label text-muted">{{ $agency->email }}</p>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">url</p>
+                    <p class="col-form-label text-muted">{{ $agency->webiste }}</p>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes</label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">message</p>
+                    <p class="col-form-label text-muted">{{ $agency->notes }}</p>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Tax ID #</label>
                   <div class="col-sm-9">
-                    <p class="col-form-label text-muted">Tax id</p>
+                    <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->tax_id }}</p>
                   </div>
                 </div>
               </div>
@@ -153,7 +153,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Business Type</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">Business</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->business_type }}</p>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fiscal Month Start</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->fiscal_month_start }}</p>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fiscal Month End</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->fiscal_month_end }}</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@
                   <label class="col-sm-3 col-form-label">Income Tax Due</label>
                   <div class="col-sm-9">
                     <!-- class="form-control" -->
-                    <p class="col-form-label text-muted">incom</p>
+                    <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->income_tax }}</p>
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Franchise Tax Due </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">Tax</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->franchise_tax_due }}</p>
                 </div>
                 </div>
               </div>
@@ -211,7 +211,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Sales Tax Due</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">sales tax</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->sales_tax_due }}</p>
                 </div>
                 </div>
               </div>
@@ -220,7 +220,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Routing #</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">routing</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->routing_no }}</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Type of account</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">account</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->type_of_account }}</p>
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Account #</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">Account</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAccountingInfo->account_no }}</p>
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Policy #</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">policy</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyEandOInfo->policy_no }}</p>
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Effective Date</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyEandOInfo->effective_date }}</p>
                   </div>
                 </div>
               </div>
@@ -287,7 +287,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyEandOInfo->expiration_date }}</p>
                 </div>
                 </div>
               </div>
@@ -299,7 +299,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Policy Limits</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">policy</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyEandOInfo->policy_limits }}</p>
                   </div>
                 </div>
               </div>
@@ -327,7 +327,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Resident State:</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">state</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->resident_state }}</p>
                   </div>
                 </div>
               </div>
@@ -340,7 +340,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">NPN #</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">npn</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->npn_no }}</p>
                   </div>
                 </div>
               </div>
@@ -349,7 +349,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License # </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">license</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->license_no }}</p>
                   </div>
                 </div>
               </div>
@@ -362,7 +362,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License Type</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">type</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->license_type }}</p>
                   </div>
                 </div>
               </div>
@@ -371,7 +371,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->expiration_date }}</p>
                   </div>
                 </div>
               </div>
@@ -384,19 +384,19 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">update date</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLicenseInfo->upload_date }}</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
+              {{-- <div class="col-md-6">
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Non-resident States </label>
                   <div class="col-sm-9">
                   <p class="col-form-label text-muted">state</p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
             </div>
              <!-- row new -->
@@ -409,7 +409,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">State</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">state</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyNonResidentialState[0]->state }}</p>
                   </div>
                 </div>
               </div>
@@ -418,7 +418,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License # </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">license</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyNonResidentialState[0]->license_no }}</p>
                   </div>
                 </div>
               </div>
@@ -431,7 +431,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">License Type</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">type</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyNonResidentialState[0]->license_type }}</p>
                   </div>
                 </div>
               </div>
@@ -440,7 +440,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Expiration Date </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyNonResidentialState[0]->expiration_date }}</p>
                   </div>
                 </div>
               </div>
@@ -455,7 +455,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Company</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">company</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->company }}</p>
                   </div>
                 </div>
               </div>
@@ -464,7 +464,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">website</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->website }}</p>
                   </div>
                 </div>
               </div>
@@ -477,7 +477,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">User Name</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">name</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->user_name }}</p>
                   </div>
                 </div>
               </div>
@@ -486,7 +486,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Password </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">password</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->password }}</p>
                   </div>
                 </div>
               </div>
@@ -499,7 +499,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">PIN</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">pin</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->pin }}</p>
                   </div>
                 </div>
               </div>
@@ -508,7 +508,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">massage</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyLoginInfo[0]->notes }}</p>
                   </div>
                 </div>
               </div>
@@ -521,18 +521,18 @@
   <div class="row">
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">DBA Name</label>
+                  <label class="col-sm-3 col-form-label">DBA </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">DBA</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyDbaAdd[0]->dba }}</p>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">DOI Registered State(s) </label>
+                  <label class="col-sm-3 col-form-label">DBA Name</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">state</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyDbaAdd[0]->dba_name }}</p>
                   </div>
                 </div>
               </div>
@@ -544,14 +544,20 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label">Exp. Date</label>
+                  <label class="col-sm-3 col-form-label">DOI Registered State(s) </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">date</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyDbaAdd[0]->doi_registered }}</p>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Exp. Date</label>
+                  <div class="col-sm-9">
+                  <p class="col-form-label text-muted">{{ $agency->agencyDbaAdd[0]->exp_date }}</p>
+                  </div>
+                </div>
                 </div> 
                 </div>
                <!-- row new -->
@@ -564,7 +570,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Manager</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">manager</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->manager }}</p>
                   </div>
                 </div>
               </div>
@@ -573,7 +579,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Address </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">address</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->address }}</p>
                   </div>
                 </div>
               </div>
@@ -585,7 +591,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Phone</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">phone</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->phone }}</p>
                   </div>
                 </div>
               </div>
@@ -594,7 +600,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Fax </label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">fax</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->fax }}</p>
                   </div>
                 </div>
               </div>
@@ -606,19 +612,19 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Email</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">email</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->email }}</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
+              {{-- <div class="col-md-6">
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Website </label>
                   <div class="col-sm-9">
                   <p class="col-form-label text-muted">website</p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
             </div>
              <!-- row new -->
@@ -627,7 +633,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Notes:</label>
                   <div class="col-sm-9">
-                  <p class="col-form-label text-muted">massage</p>
+                  <p class="col-form-label text-muted">{{ $agency->agencyAdditionalLocation[0]->notes }}</p>
                   </div>
                 </div>
               </div>
