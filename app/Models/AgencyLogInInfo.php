@@ -14,6 +14,7 @@ class AgencyLogInInfo extends Model
      * @var string
      */
     protected $table = 'log_in_info';
+    protected $guarded = [];
     public function agency()
     {
         return $this->belongsTo(Agency::class);

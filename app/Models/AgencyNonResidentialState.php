@@ -14,6 +14,7 @@ class AgencyNonResidentialState extends Model
      * @var string
      */
     protected $table = 'non_residential_states';
+    protected $guarded = [];
     public function agency()
     {
         return $this->belongsTo(Agency::class);

@@ -129,7 +129,7 @@
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth_1" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-toggle="collapse" href="#auth_1" aria-expanded="false" aria-controls="auth_1">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
               </span>
@@ -138,14 +138,14 @@
             </a>
             <div class="collapse" id="auth_1">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agent/create') }}"> Add Agents </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('agent.create')}}"> Add Agents </a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ URL::TO('agent') }}"> Agents List </a></li>
               
               </ul>
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic_1" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic_1" aria-expanded="false" aria-controls="ui-basic_1">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
               </span>
@@ -160,7 +160,7 @@
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic_x" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic_x" aria-expanded="false" aria-controls="ui-basic_x">
               <span class="menu-icon">
                 <i class="mdi mdi-account-circle"></i>
               </span>
@@ -175,7 +175,7 @@
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic-3" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic-3" aria-expanded="false" aria-controls="ui-basic-3">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
               </span>

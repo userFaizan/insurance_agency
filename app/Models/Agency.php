@@ -14,7 +14,7 @@ class Agency extends Model
      * @var string
      */
     protected $table = 'agencies';
-
+    protected $guarded = [];
     public function agencyAccountingInfo()
     {
         return $this->hasOne(AgencyAccountingInfo::class);
@@ -29,7 +29,7 @@ class Agency extends Model
     }
     public function agencyLicenseInfo()
     {
-        return $this->hasOne(AgenctLicenseInfo::class);
+        return $this->hasOne(AgencyLicenseInfo::class);
     }
     public function agencyLoginInfo()
     {

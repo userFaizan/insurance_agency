@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AgenctLicenseInfo extends Model
+class AgencyLicenseInfo extends Model
 {
     use HasFactory;
       /**
@@ -14,6 +14,7 @@ class AgenctLicenseInfo extends Model
      * @var string
      */
     protected $table = 'agency_license_info';
+    protected $guarded = [];
     public function agency()
     {
         return $this->belongsTo(Agency::class);

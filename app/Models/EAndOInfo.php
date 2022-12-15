@@ -14,6 +14,8 @@ class EAndOInfo extends Model
      * @var string
      */
     protected $table = 'agency_e_and_o_info';
+    protected $guarded = [];
+
     public function agency()
     {
         return $this->belongsTo(Agency::class);
